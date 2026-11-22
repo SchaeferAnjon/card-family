@@ -1,0 +1,312 @@
+{
+  "about": "纯函数：fn 是函数名，input 是参数，expect 是结果",
+  "cases": [
+    {
+      "fn": "escapeHTML",
+      "input": "a & b < c > d \"e\" 'f'",
+      "expect": "a &amp; b &lt; c &gt; d &quot;e&quot; 'f'"
+    },
+    {
+      "fn": "textHTML",
+      "input": "  用 `git reset --soft HEAD~1` 撤销**上一次**提交  ",
+      "expect": "用 <code>git reset --soft HEAD~1</code> 撤销<b>上一次</b>提交"
+    },
+    {
+      "fn": "textHTML",
+      "input": "第一行\n第二行\r\n第三行\r第四行",
+      "expect": "第一行<br>第二行<br>第三行<br>第四行"
+    },
+    {
+      "fn": "textHTML",
+      "input": "`没收尾 和 **也没收尾",
+      "expect": "`没收尾 和 **也没收尾"
+    },
+    {
+      "fn": "textHTML",
+      "input": "`a`和`b`，**粗**和**体**",
+      "expect": "<code>a</code>和<code>b</code>，<b>粗</b>和<b>体</b>"
+    },
+    {
+      "fn": "textHTML",
+      "input": "<script>alert(\"x\")</script> & `<b>`",
+      "expect": "&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt; &amp; <code>&lt;b&gt;</code>"
+    },
+    {
+      "fn": "textHTML",
+      "input": "",
+      "expect": ""
+    },
+    {
+      "fn": "textHTML",
+      "input": "　全角空格开头 ",
+      "expect": "全角空格开头"
+    },
+    {
+      "fn": "pointsHTML",
+      "input": "只有一条",
+      "expect": "只有一条"
+    },
+    {
+      "fn": "pointsHTML",
+      "input": "- 只有一条，前面有横线",
+      "expect": "- 只有一条，前面有横线"
+    },
+    {
+      "fn": "pointsHTML",
+      "input": "- 第一条\n• 第二条 `code`\n\n· 第三条\n* 第四条",
+      "expect": "<ul><li>第一条</li><li>第二条 <code>code</code></li><li>第三条</li><li>第四条</li></ul>"
+    },
+    {
+      "fn": "pointsHTML",
+      "input": "第一条\r\n第二条 第三条",
+      "expect": "<ul><li>第一条</li><li>第二条</li><li>第三条</li></ul>"
+    },
+    {
+      "fn": "pointsHTML",
+      "input": "   \n  \n",
+      "expect": ""
+    },
+    {
+      "fn": "pointsHTML",
+      "input": "-   \n- 有字",
+      "expect": "-   <br>- 有字"
+    },
+    {
+      "fn": "numberedHTML",
+      "input": "在德国开进环岛不用打灯\n开出去要打右灯",
+      "expect": "<ol><li>在德国开进环岛不用打灯</li><li>开出去要打右灯</li></ol>"
+    },
+    {
+      "fn": "numberedHTML",
+      "input": "只有一条要点",
+      "expect": "只有一条要点"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "Git 怎么撤销上一次提交？",
+      "expect": "git怎么撤销上一次提交"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "git怎么撤销上一次提交",
+      "expect": "git怎么撤销上一次提交"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "「这是什么意思」？！",
+      "expect": "这是什么意思"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "What is `git rebase --onto`?",
+      "expect": "whatis`gitrebaseonto`"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "a+b=c $x^2$ <tag>",
+      "expect": "a+b=c$x^2$<tag>"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "Straße ÄÖÜ İstanbul",
+      "expect": "straßeäöüi̇stanbul"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "　全角 空白\t和\n换行",
+      "expect": "全角空白和换行"
+    },
+    {
+      "fn": "dedupeKey",
+      "input": "……——《》（）【】、；：",
+      "expect": ""
+    },
+    {
+      "fn": "tagSafe",
+      "input": "  德国 交规  ",
+      "expect": "德国_交规"
+    },
+    {
+      "fn": "tagSafe",
+      "input": "Ask Free",
+      "expect": "Ask_Free"
+    },
+    {
+      "fn": "tagSafe",
+      "input": "a\tb　c",
+      "expect": "a_b_c"
+    },
+    {
+      "fn": "fromTag",
+      "input": "ChatCards",
+      "expect": "来自::ChatCards"
+    },
+    {
+      "fn": "fromTag",
+      "input": "Ask Free",
+      "expect": "来自::Ask_Free"
+    },
+    {
+      "fn": "fromTag",
+      "input": "Canvas Notes",
+      "expect": "来自::Canvas_Notes"
+    },
+    {
+      "fn": "topicTag",
+      "input": "Git",
+      "expect": "主题::Git"
+    },
+    {
+      "fn": "topicTag",
+      "input": "主题::Swift UI",
+      "expect": "主题::Swift_UI"
+    },
+    {
+      "fn": "topicTag",
+      "input": "  ",
+      "expect": ""
+    },
+    {
+      "fn": "deckName",
+      "input": [
+        "知识"
+      ],
+      "expect": "知识"
+    },
+    {
+      "fn": "deckName",
+      "input": [
+        "语言学习",
+        "英语"
+      ],
+      "expect": "语言学习::英语"
+    },
+    {
+      "fn": "deckName",
+      "input": [
+        "课程",
+        "ecp",
+        "Week 2",
+        "补充材料"
+      ],
+      "expect": "课程::ecp::Week 2::补充材料"
+    },
+    {
+      "fn": "deckName",
+      "input": [
+        "课程",
+        "a::b",
+        "  多个   空格  ",
+        "",
+        "   "
+      ],
+      "expect": "课程::a：b::多个 空格"
+    },
+    {
+      "fn": "deckName",
+      "input": [
+        "课程",
+        "换行\n和\t制表",
+        "控制\u0001字符",
+        "\u0007"
+      ],
+      "expect": "课程::换行 和 制表::控制字符"
+    },
+    {
+      "fn": "idQuery",
+      "input": [
+        "chatcards-1"
+      ],
+      "expect": "\"ID:chatcards-1\""
+    },
+    {
+      "fn": "idQuery",
+      "input": [
+        "askfree-a",
+        "askfree-b",
+        "gnw-snip-c"
+      ],
+      "expect": "\"ID:askfree-a\" OR \"ID:askfree-b\" OR \"ID:gnw-snip-c\""
+    },
+    {
+      "fn": "idQuery",
+      "input": [],
+      "expect": ""
+    },
+    {
+      "fn": "cssVersion",
+      "input": "/* 卡片家族 v3 */\n.card {}",
+      "expect": 3
+    },
+    {
+      "fn": "cssVersion",
+      "input": "  /* 卡片家族 v12 */  \n.card {}",
+      "expect": 12
+    },
+    {
+      "fn": "cssVersion",
+      "input": "/* 卡片家族 v3 */",
+      "expect": 3
+    },
+    {
+      "fn": "cssVersion",
+      "input": "/* 卡片家族 */\n.card {}",
+      "expect": null
+    },
+    {
+      "fn": "cssVersion",
+      "input": ".card { color: red }",
+      "expect": null
+    },
+    {
+      "fn": "cssVersion",
+      "input": "",
+      "expect": null
+    },
+    {
+      "fn": "cssVersion",
+      "input": "/* 卡片家族 vx */",
+      "expect": null
+    },
+    {
+      "fn": "readableError",
+      "input": "Close the affected editor and try again",
+      "expect": "Anki 里开着卡片浏览器或「添加」窗口，Anki 不让这时改笔记类型；关掉它再送"
+    },
+    {
+      "fn": "readableError",
+      "input": "cannot create note because it is a duplicate",
+      "expect": "cannot create note because it is a duplicate"
+    },
+    {
+      "fn": "fieldIsEmpty",
+      "input": "",
+      "expect": true
+    },
+    {
+      "fn": "fieldIsEmpty",
+      "input": " <br> <br/> <div></div> \n",
+      "expect": true
+    },
+    {
+      "fn": "fieldIsEmpty",
+      "input": "<BR />",
+      "expect": true
+    },
+    {
+      "fn": "fieldIsEmpty",
+      "input": "&nbsp;",
+      "expect": false
+    },
+    {
+      "fn": "fieldIsEmpty",
+      "input": "<img src=\"a.png\">",
+      "expect": false
+    },
+    {
+      "fn": "fieldIsEmpty",
+      "input": "字",
+      "expect": false
+    }
+  ]
+}

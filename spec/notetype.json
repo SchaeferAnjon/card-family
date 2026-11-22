@@ -1,0 +1,23 @@
+{
+  "name": "学习卡 · 问答",
+  "otherName": "学习卡 · 问答 2",
+  "templateName": "问答",
+  "version": 3,
+  "cssFirstLine": "/* 卡片家族 v{version} */",
+  "templates": {
+    "front": "templates/front.html",
+    "back": "templates/back.html",
+    "css": "templates/style.css"
+  },
+  "fields": [
+    { "name": "Question", "zh": "问题", "note": "第一个字段，Anki 按它判重。纯文字转 HTML。" },
+    { "name": "Answer", "zh": "答案", "note": "一句话；答案本身是几条要点时写 <ol>。" },
+    { "name": "More", "zh": "补充", "note": "两条以上写 <ul>，一条写一段，没有就空。" },
+    { "name": "Quote", "zh": "原文", "note": "原话或原文，收进纸底「原文」折叠。" },
+    { "name": "Image", "zh": "截图", "note": "<img>。带 class=\"lead\" 的放在问题下面，不带的收进纸底「当时的画面」。src 用 storeMediaFile 回的文件名。" },
+    { "name": "Label", "zh": "纸顶小字", "note": "「<软件> · <来源>」，例如「ChatCards · Claude Code」。" },
+    { "name": "Source", "zh": "出处", "note": "「标题 · 日期」，纯文字，不带链接。" },
+    { "name": "Link", "zh": "原文地址", "note": "模板里写成「打开原文」；没有就空。" },
+    { "name": "ID", "zh": "编号", "note": "<软件前缀>-<编号>，只用字母、数字、- 和 _。判重、在 Anki 里找卡、回写都靠它；不在卡上显示。" }
+  ]
+}

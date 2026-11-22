@@ -1,0 +1,34 @@
+{
+  "name": "@card-family/core",
+  "version": "0.1.0",
+  "description": "写问答卡的软件共用的 Anki 规范：笔记类型「学习卡 · 问答」、模板和样式、出卡规矩、判重、牌组、AnkiConnect 请求",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SchaeferAnjon/card-family.git"
+  },
+  "type": "module",
+  "main": "./packages/ts/dist/index.js",
+  "types": "./packages/ts/dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./packages/ts/dist/index.d.ts",
+      "default": "./packages/ts/dist/index.js"
+    }
+  },
+  "files": [
+    "packages/ts/dist",
+    "spec"
+  ],
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "gen": "node scripts/gen.mjs",
+    "build": "node scripts/gen.mjs && tsc -p packages/ts",
+    "test": "npm run build && node --test packages/ts/test/"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

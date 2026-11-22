@@ -1,0 +1,140 @@
+{
+  "about": "input 交给 studyCardFields 得到 fields；fields 填进模板得到 front、back",
+  "cases": [
+    {
+      "name": "ChatCards：带代码、补充两条、原文、链接",
+      "input": {
+        "question": "git rebase 冲突记号中 `=======` 与 `>>>>>>>` 之间是什么内容？",
+        "answer": "正在被重放的那个提交的改动。",
+        "more": "- `<<<<<<<` 到 `=======` 是你要变基到的那一边\n- 解决完 `git add` 再 `git rebase --continue`",
+        "quote": "`=======` 到 `>>>>>>>` 之间是正在重放的那个提交的改动",
+        "label": "ChatCards · 文档",
+        "source": "git-rebase-笔记 · 2026-11-08",
+        "link": "https://git-scm.com/docs/git-rebase?a=1&b=2",
+        "id": "chatcards-2f1c0a7e-0000-4000-8000-000000000001"
+      },
+      "fields": {
+        "Question": "git rebase 冲突记号中 <code>=======</code> 与 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 之间是什么内容？",
+        "Answer": "正在被重放的那个提交的改动。",
+        "More": "<ul><li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 到 <code>=======</code> 是你要变基到的那一边</li><li>解决完 <code>git add</code> 再 <code>git rebase --continue</code></li></ul>",
+        "Quote": "<code>=======</code> 到 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 之间是正在重放的那个提交的改动",
+        "Image": "",
+        "Label": "ChatCards · 文档",
+        "Source": "git-rebase-笔记 · 2026-11-08",
+        "Link": "https://git-scm.com/docs/git-rebase?a=1&amp;b=2",
+        "ID": "chatcards-2f1c0a7e-0000-4000-8000-000000000001"
+      },
+      "front": "<div class=\"fam\">\n<div class=\"top\"><div class=\"meta\">ChatCards · 文档</div><div class=\"q\">git rebase 冲突记号中 <code>=======</code> 与 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 之间是什么内容？</div></div>\n</div>",
+      "back": "<div class=\"fam back\">\n<div class=\"top\"><div class=\"meta\">ChatCards · 文档</div><div class=\"q\">git rebase 冲突记号中 <code>=======</code> 与 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 之间是什么内容？</div></div>\n<div class=\"ans\"><div class=\"a\">正在被重放的那个提交的改动。</div><div class=\"more\"><ul><li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 到 <code>=======</code> 是你要变基到的那一边</li><li>解决完 <code>git add</code> 再 <code>git rebase --continue</code></li></ul></div></div>\n<div class=\"foot\"><div class=\"src\"><span>git-rebase-笔记 · 2026-11-08</span><a class=\"open\" href=\"https://git-scm.com/docs/git-rebase?a=1&b=2\">打开原文</a></div><details><summary>原文</summary><div class=\"body\"><code>=======</code> 到 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 之间是正在重放的那个提交的改动</div></details></div>\n</div>"
+    },
+    {
+      "name": "Ask Free：截图放在问题下面，没有原文、链接",
+      "input": {
+        "question": "这是什么意思？\n（屏幕上那一句）",
+        "answer": "**Vorfahrt** 是「先行权」。",
+        "more": "路口没有标志时右边来的先走",
+        "image": {
+          "src": "askfree-t1.jpg",
+          "lead": true
+        },
+        "label": "Ask Free · 看屏幕问",
+        "source": "德国交规 · 2026-10-30 21:04",
+        "id": "askfree-t1"
+      },
+      "fields": {
+        "Question": "这是什么意思？<br>（屏幕上那一句）",
+        "Answer": "<b>Vorfahrt</b> 是「先行权」。",
+        "More": "路口没有标志时右边来的先走",
+        "Quote": "",
+        "Image": "<img class=\"lead\" src=\"askfree-t1.jpg\">",
+        "Label": "Ask Free · 看屏幕问",
+        "Source": "德国交规 · 2026-10-30 21:04",
+        "Link": "",
+        "ID": "askfree-t1"
+      },
+      "front": "<div class=\"fam\">\n<div class=\"top\"><div class=\"meta\">Ask Free · 看屏幕问</div><div class=\"q\">这是什么意思？<br>（屏幕上那一句）</div><div class=\"shot\"><img class=\"lead\" src=\"askfree-t1.jpg\"></div></div>\n</div>",
+      "back": "<div class=\"fam back\">\n<div class=\"top\"><div class=\"meta\">Ask Free · 看屏幕问</div><div class=\"q\">这是什么意思？<br>（屏幕上那一句）</div><div class=\"shot\"><img class=\"lead\" src=\"askfree-t1.jpg\"></div></div>\n<div class=\"ans\"><div class=\"a\"><b>Vorfahrt</b> 是「先行权」。</div><div class=\"more\">路口没有标志时右边来的先走</div></div>\n<div class=\"foot\"><div class=\"src\"><span>德国交规 · 2026-10-30 21:04</span></div><details class=\"pic\"><summary>当时的画面</summary><div class=\"body\"><img class=\"lead\" src=\"askfree-t1.jpg\"></div></details></div>\n</div>"
+    },
+    {
+      "name": "GetNewWord 知识片段：答案是几条要点，截图收进「当时的画面」",
+      "input": {
+        "question": "在德国开进环岛要打转向灯吗？开出去呢？",
+        "answer": "开进去不打灯\n开出去打右灯\n环岛里的车先走",
+        "quote": "Beim Einfahren in den Kreisverkehr nicht blinken.",
+        "image": {
+          "src": "gnw_snip_abc.png"
+        },
+        "label": "GetNewWord · 交通规则",
+        "source": "环岛 · 2026-11-01",
+        "id": "gnw-snip-abc",
+        "answerStyle": "numbered"
+      },
+      "fields": {
+        "Question": "在德国开进环岛要打转向灯吗？开出去呢？",
+        "Answer": "<ol><li>开进去不打灯</li><li>开出去打右灯</li><li>环岛里的车先走</li></ol>",
+        "More": "",
+        "Quote": "Beim Einfahren in den Kreisverkehr nicht blinken.",
+        "Image": "<img src=\"gnw_snip_abc.png\">",
+        "Label": "GetNewWord · 交通规则",
+        "Source": "环岛 · 2026-11-01",
+        "Link": "",
+        "ID": "gnw-snip-abc"
+      },
+      "front": "<div class=\"fam\">\n<div class=\"top\"><div class=\"meta\">GetNewWord · 交通规则</div><div class=\"q\">在德国开进环岛要打转向灯吗？开出去呢？</div><div class=\"shot\"><img src=\"gnw_snip_abc.png\"></div></div>\n</div>",
+      "back": "<div class=\"fam back\">\n<div class=\"top\"><div class=\"meta\">GetNewWord · 交通规则</div><div class=\"q\">在德国开进环岛要打转向灯吗？开出去呢？</div><div class=\"shot\"><img src=\"gnw_snip_abc.png\"></div></div>\n<div class=\"ans\"><div class=\"a\"><ol><li>开进去不打灯</li><li>开出去打右灯</li><li>环岛里的车先走</li></ol></div></div>\n<div class=\"foot\"><div class=\"src\"><span>环岛 · 2026-11-01</span></div><details><summary>原文</summary><div class=\"body\">Beim Einfahren in den Kreisverkehr nicht blinken.</div></details><details class=\"pic\"><summary>当时的画面</summary><div class=\"body\"><img src=\"gnw_snip_abc.png\"></div></details></div>\n</div>"
+    },
+    {
+      "name": "画布笔记：框的图带宽度，链接回到软件",
+      "input": {
+        "question": "Transformer 里 attention 为什么要除以 $\\sqrt{d_k}$？",
+        "answer": "防止点积太大把 softmax 推到梯度很小的区域。",
+        "more": "维度越大点积方差越大\n除以 √d_k 让方差回到 1",
+        "quote": "We suspect that for large values of d_k, the dot products grow large in magnitude",
+        "image": {
+          "src": "canvasnotes-1x2y.png",
+          "lead": true,
+          "width": 412.6
+        },
+        "label": "Canvas Notes · ecp",
+        "source": "Lecture05 · 第 12 页",
+        "link": "canvas-notes://open?file=%E8%AF%BE%E7%A8%8B%2Fecp%2FLecture05.pdf&page=12",
+        "id": "canvasnotes-1x2y"
+      },
+      "fields": {
+        "Question": "Transformer 里 attention 为什么要除以 $\\sqrt{d_k}$？",
+        "Answer": "防止点积太大把 softmax 推到梯度很小的区域。",
+        "More": "<ul><li>维度越大点积方差越大</li><li>除以 √d_k 让方差回到 1</li></ul>",
+        "Quote": "We suspect that for large values of d_k, the dot products grow large in magnitude",
+        "Image": "<img class=\"lead\" src=\"canvasnotes-1x2y.png\" width=\"413\">",
+        "Label": "Canvas Notes · ecp",
+        "Source": "Lecture05 · 第 12 页",
+        "Link": "canvas-notes://open?file=%E8%AF%BE%E7%A8%8B%2Fecp%2FLecture05.pdf&amp;page=12",
+        "ID": "canvasnotes-1x2y"
+      },
+      "front": "<div class=\"fam\">\n<div class=\"top\"><div class=\"meta\">Canvas Notes · ecp</div><div class=\"q\">Transformer 里 attention 为什么要除以 $\\sqrt{d_k}$？</div><div class=\"shot\"><img class=\"lead\" src=\"canvasnotes-1x2y.png\" width=\"413\"></div></div>\n</div>",
+      "back": "<div class=\"fam back\">\n<div class=\"top\"><div class=\"meta\">Canvas Notes · ecp</div><div class=\"q\">Transformer 里 attention 为什么要除以 $\\sqrt{d_k}$？</div><div class=\"shot\"><img class=\"lead\" src=\"canvasnotes-1x2y.png\" width=\"413\"></div></div>\n<div class=\"ans\"><div class=\"a\">防止点积太大把 softmax 推到梯度很小的区域。</div><div class=\"more\"><ul><li>维度越大点积方差越大</li><li>除以 √d_k 让方差回到 1</li></ul></div></div>\n<div class=\"foot\"><div class=\"src\"><span>Lecture05 · 第 12 页</span><a class=\"open\" href=\"canvas-notes://open?file=%E8%AF%BE%E7%A8%8B%2Fecp%2FLecture05.pdf&page=12\">打开原文</a></div><details><summary>原文</summary><div class=\"body\">We suspect that for large values of d_k, the dot products grow large in magnitude</div></details><details class=\"pic\"><summary>当时的画面</summary><div class=\"body\"><img class=\"lead\" src=\"canvasnotes-1x2y.png\" width=\"413\"></div></details></div>\n</div>"
+    },
+    {
+      "name": "只有问题和答案",
+      "input": {
+        "question": "<b> 标签在 HTML 里做什么？",
+        "answer": "加粗。",
+        "label": "ChatCards · Claude Code",
+        "id": "chatcards-min"
+      },
+      "fields": {
+        "Question": "&lt;b&gt; 标签在 HTML 里做什么？",
+        "Answer": "加粗。",
+        "More": "",
+        "Quote": "",
+        "Image": "",
+        "Label": "ChatCards · Claude Code",
+        "Source": "",
+        "Link": "",
+        "ID": "chatcards-min"
+      },
+      "front": "<div class=\"fam\">\n<div class=\"top\"><div class=\"meta\">ChatCards · Claude Code</div><div class=\"q\">&lt;b&gt; 标签在 HTML 里做什么？</div></div>\n</div>",
+      "back": "<div class=\"fam back\">\n<div class=\"top\"><div class=\"meta\">ChatCards · Claude Code</div><div class=\"q\">&lt;b&gt; 标签在 HTML 里做什么？</div></div>\n<div class=\"ans\"><div class=\"a\">加粗。</div></div>\n<div class=\"foot\"><div class=\"src\"></div></div>\n</div>"
+    }
+  ]
+}
