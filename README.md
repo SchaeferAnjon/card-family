@@ -83,7 +83,7 @@ const result = await addNotes(call, [{ deck: deck.name, model, fields, tags: [fr
 .package(url: "https://github.com/SchaeferAnjon/card-family.git", from: "0.1.0")
 ```
 
-目标里加 `.product(name: "CardFamily", package: "card-family")`。Xcode 项目在「Package Dependencies」里加同一个地址。要 macOS 13 / iOS 16 或更新。
+目标里加 `.product(name: "CardFamily", package: "card-family")`。Xcode 项目在「Package Dependencies」里加同一个地址。要 Xcode 16（Swift 6）或更新，跑在 macOS 13 / iOS 16 或更新。
 
 ```swift
 import CardFamily
@@ -120,7 +120,7 @@ let result = try await Anki.addNotes(call, [NoteInput(deck: deck.name, model: mo
 1. 改 `spec/` 里的数据文件。改模板或样式时把 `notetype.json` 的 `version` 加一，`style.css` 第一行跟着改成新的 `/* 卡片家族 vN */`。
 2. 跑 `npm run gen`，把规范重新生成进两个包。
 3. 改了行为就在 `fixtures/` 里加样例，写上期望的输出。
-4. `npm test` 和 `swift test` 都过。两个包读同一批样例，结果不一样就不过；生成的常量和 `spec/` 对不上也不过。
+4. `npm test`（要 Node 22.18 或更新）和 `swift test`（要 Swift 6）都过。两个包读同一批样例，结果不一样就不过；生成的常量和 `spec/` 对不上也不过。
 5. 提交，打 tag（`v0.2.0` 这样），推上去。
 6. 各软件把依赖的版本号改成新的 tag，跑自己的测试，发版。
 

@@ -83,7 +83,7 @@ In `Package.swift`:
 .package(url: "https://github.com/SchaeferAnjon/card-family.git", from: "0.1.0")
 ```
 
-Add `.product(name: "CardFamily", package: "card-family")` to your target. In an Xcode project, add the same URL under Package Dependencies. Needs macOS 13 / iOS 16 or later.
+Add `.product(name: "CardFamily", package: "card-family")` to your target. In an Xcode project, add the same URL under Package Dependencies. Needs Xcode 16 (Swift 6) or later and runs on macOS 13 / iOS 16 or later.
 
 ```swift
 import CardFamily
@@ -120,7 +120,7 @@ let result = try await Anki.addNotes(call, [NoteInput(deck: deck.name, model: mo
 1. Edit the data files in `spec/`. When the templates or CSS change, add one to `version` in `notetype.json` and update the first line of `style.css` to the new `/* 卡片家族 vN */`.
 2. Run `npm run gen` to regenerate the constants in both packages.
 3. If behaviour changed, add examples with their expected output to `fixtures/`.
-4. `npm test` and `swift test` must both pass. Both read the same examples, so any difference between the packages fails; generated constants that no longer match `spec/` fail too.
+4. `npm test` (Node 22.18 or later) and `swift test` (Swift 6) must both pass. Both read the same examples, so any difference between the packages fails; generated constants that no longer match `spec/` fail too.
 5. Commit, tag (`v0.2.0` and so on), push.
 6. Each app bumps the tag it depends on, runs its own tests and ships.
 

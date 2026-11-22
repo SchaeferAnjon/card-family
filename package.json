@@ -26,7 +26,7 @@
   "scripts": {
     "gen": "node scripts/gen.mjs",
     "build": "node scripts/gen.mjs && tsc -p packages/ts",
-    "test": "npm run build && node --test packages/ts/test/"
+    "test": "npm run build && node --test \"packages/ts/test/*.test.ts\""
   },
   "devDependencies": {
     "typescript": "^5.9.3"
